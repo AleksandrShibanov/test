@@ -13,3 +13,4 @@ void read_from_file(const char *filename, Data *data) {
                                        &data.credit_limit,
                                        &data.cash_payments)
 }
+}
