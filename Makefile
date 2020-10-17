@@ -1,12 +1,14 @@
 TARGET = main.out
 HDRS_DIR = project/include
 
-SRCS = project/src/main.c
+SRCS = \
+	project/src/write_funcs.c \
+	project/src/main.c
+	
 
 .PHONY: all clean
 
 all: $(SRCS)
-	$(CC) -Wall -Wextra -Werror -o $(TARGET) $(CFLAGS) $(SRCS)
-
+	$(CC) -Wall -Wextra -Werror -I $(HDRS_DIR) -o $(TARGET) $(CFLAGS) $(SRCS) 
 clean:
 	rm -rf $(TARGET)
